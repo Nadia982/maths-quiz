@@ -1,8 +1,9 @@
 import Quiz from "./Quiz"
+import {mathsQuiz} from "./constants";
 
 function App() {
   return (
-        <Quiz/>    
+        <Quiz questions = {mathsQuiz.questions}/>    
   )
 }
 
