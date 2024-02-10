@@ -1,6 +1,17 @@
-const Quiz = () => {
+import {useState} from "react";
+
+const Quiz = ({questions}) => {
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const {question, choices, correctAnswer} = questions[currentQuestion];
+
   return (
     <div className="quiz-container">
+        <>
+        <span className="active-question-no">{currentQuestion + 1}</span>
+        <span className="total-questions">/{questions.length}
+
+        </span>
+        </>
     <p class="attribution">
       The questions on this website contain public sector information licensed
       under <pre>the </pre> 
