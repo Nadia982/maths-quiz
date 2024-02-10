@@ -23,5 +23,22 @@ pre {
   display: inline;
 }
 
+.quiz-container{
+  width: 500px;
+  background: $bg;
+  border-radius: 4px;
+  margin-top: 100px;
+  padding: 30px 60px;
 
+  .active-question-no{
+    font-size: 2rem;
+    font-weight: 500;
+    color: $primary;
+  }
 
+  .total-questions{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $disabled;
+  }
+}
