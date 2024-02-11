@@ -26,18 +26,22 @@ const onClickNext = () => {
           <span className="active-question-no">{currentQuestion + 1}</span>
           <span className="total-questions">/{questions.length}</span>
           <h2>{question}</h2>
-          <ul>
+          <div className="choices-container">
             {choices.map((answer, index) => (
-              <li
+              <button
                 onClick={() => onAnswerClick(answer, index)}
                 key={answer}
                 className={answerIndex === index ? "selected-answer" : null}
               >
                 {answer}
-              </li>
+              </button>
             ))}
-          </ul>
-          
+          </div>
+          <div className="footer">
+            <button onClick = {onClickNext} disabled={answerIndex === null}>
+              {currentQuestion ===questions.length -1 ? "Finish" : "Next"}
+            </button>
+          </div>
         </>
       </div>
       <p class="attribution">

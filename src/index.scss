@@ -50,13 +50,14 @@ pre {
     margin-top: 1rem;
   }
 
-  ul {
+  .choices-container {
     margin-top: 20px;
     padding: 0;
 
-    li{
-      text-decoration: none;
-     list-style-type: none; 
+    button {
+      display: block;
+
+     width: 90%;
      color: $foreground;
      font-size: 1.2rem;
      background-color: $bg;
@@ -69,13 +70,42 @@ pre {
 
     .selected-answer {
       background: $primary;
-      border: 1px solid $accent;
       color: $bg;
     }
+    :focus{
+      outline: 3px solid $primary;
+    }
   }
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+
+    button{
+      background: $accent;
+      border-radius: .5em;
+      font-size: 1.2rem;
+      color: #000;
+      padding: 1rem 3rem;
+      border: 3px solid #fff;
+      cursor: pointer;
+      margin-top: 1em;
+      
+      &:disabled {
+        background: $bg-accent;
+        color: $disabled;
+        cursor: not-allowed;
+      }
+    }
+    :focus {
+      outline: 3px solid $accent;
+    }
+  }
+  
+
 }
 
 .attribution {
+  background: inherit;
   color: #fff;
   width: 90vw; 
   max-width: 500px;
