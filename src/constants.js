@@ -4,9 +4,9 @@ export const mathsQuiz = {
         id: 0,
         question:
           "Which clock shows 5 minutes past 11?",
-        choices: [4, 5, 10, 20],
+        choices: ["4", "5", "10", "20"],
         type: "MCQ",
-        correctAnswer: 20,
+        correctAnswer: "20",
       },
     {
         id: 1,

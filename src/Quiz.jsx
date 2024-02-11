@@ -2,10 +2,10 @@ import { useState } from "react";
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const { question, choices, correctAnswer } = questions[currentQuestion];
   const [answerIndex, setAnswerIndex] = useState(null);
   const [answer, setAnswer] = useState(null);
-
+  const { question, choices, correctAnswer } = questions[currentQuestion];
+  
   const onAnswerClick = (answer, index) => {
     setAnswerIndex(index);
     if (answer === correctAnswer) {
@@ -14,6 +14,10 @@ const Quiz = ({ questions }) => {
       setAnswer(false);
     }
   };
+
+const onClickNext = () => {
+
+}
 
   return (
     <>
@@ -25,13 +29,15 @@ const Quiz = ({ questions }) => {
           <ul>
             {choices.map((answer, index) => (
               <li
-                onclick={() => onAnswerClick(answer, index)}
+                onClick={() => onAnswerClick(answer, index)}
                 key={answer}
-                className={answerIndex === index?"selected-answer": null}
-
-              >{answer}</li>
+                className={answerIndex === index ? "selected-answer" : null}
+              >
+                {answer}
+              </li>
             ))}
           </ul>
+          
         </>
       </div>
       <p class="attribution">
