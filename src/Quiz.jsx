@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { resultInitialState } from "./constants";
+
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answerIndex, setAnswerIndex] = useState(null);
   const [answer, setAnswer] = useState(null);
+  const [result, setResult] = useState(resultInitialState);
   const { question, choices, correctAnswer } = questions[currentQuestion];
   
   const onAnswerClick = (answer, index) => {
@@ -16,7 +19,19 @@ const Quiz = ({ questions }) => {
   };
 
 const onClickNext = () => {
-
+  setAnswerIndex(null)
+  setResult((prev) => 
+    answer? {
+      ...prev, score: prev.score + 1, correctAnswers: prev.correctAnswers + 1 
+    } : {
+      ...prev, wrongAnswers: prev.wrongAnswers + 1
+    }
+  )
+  if(currentQuestion === questions.length - 1) {
+    setCurrentQuestion((prev)=> prev + 1)
+  } else {
+    setCurrentQuestion(0);
+  }
 }
 
   return (
