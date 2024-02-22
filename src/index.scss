@@ -5,6 +5,10 @@ $bg-accent: #e7e7e8e9;
 $disabled: #9c9c9c;
 $foreground: #2d264b;
 
+// * {
+//   border: 1px solid red;
+// }
+
 body {
   margin: 0;
   padding: 0;
@@ -23,12 +27,14 @@ pre {
 }
 
 .quiz-container {
-  width: 80vw;
-  max-width: 500px;
+  width: 90vw;
+  max-width: 600px;
+  // min-height: 80vh;
   background: $bg;
   border-radius: 4px;
   padding: 30px;
   margin: 0 auto;
+  // border: 3px solid cyan;
 
   .active-question-no {
     font-size: 2rem;
@@ -45,25 +51,27 @@ pre {
   h2 {
     font-size: 1.2rem;
     font-weight: 500;
-    margin: 0;
-    margin-top: 1rem;
+    margin: 1rem auto 2rem;
+    width: 90%;
+    text-align: center;
   }
 
   .choices-container {
-    margin-top: 20px;
+    margin: 0 auto;
     padding: 0;
+    width: 90%;
 
     button {
       display: block;
-
       width: 90%;
       color: $foreground;
       font-size: 1.2rem;
       background-color: $bg;
-      border: 1px solid $disabled;
+      border: 3px solid #fff;
+      outline: 1px solid $disabled;
       border-radius: 1rem;
       padding: 12px;
-      margin-top: 1rem;
+      margin: 1rem auto 0;
       cursor: pointer;
     }
 
@@ -88,6 +96,7 @@ pre {
       border: 3px solid #fff;
       cursor: pointer;
       margin-top: 1em;
+      
 
       &:disabled {
         background: $bg-accent;
@@ -101,13 +110,31 @@ pre {
   }
 }
 
+.try-again {
+    display: block;
+    color: #fff;
+    background-color: $primary;
+    font-size: 1.2rem;
+    border: 3px solid #fff;
+    outline: 1px solid $disabled;
+    border-radius: 1rem;
+    padding: 12px;
+    margin: 1rem auto 0;
+    cursor: pointer;
+}
+
+  :focus {
+    outline: 3px solid $primary;
+  }
+
 .attribution {
-  background: inherit;
-  color: #fff;
-  width: 90vw;
+  // background: inherit;
+  color: #222;
+  width: 90%;
   max-width: 500px;
   text-align: center;
-  margin: 30px auto;
+  margin: 2rem auto 1rem;
+  
 
   a {
     color: inherit;
