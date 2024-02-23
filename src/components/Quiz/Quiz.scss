@@ -1,0 +1,104 @@
+@import "../styles/vars.scss";
+
+.quiz-container {
+    width: 90vw;
+    max-width: 300px;
+    // min-height: 80vh;
+    background: $bg;
+    border-radius: 4px;
+    padding: 30px;
+    margin: 0 auto;
+    // border: 3px solid cyan;
+  
+    .active-question-no {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $primary;
+    }
+  
+    .total-questions {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $disabled;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 1rem auto 2rem;
+      width: 90%;
+      text-align: center;
+    }
+  
+    .choices-container {
+      margin: 0 auto;
+      padding: 0;
+      width: 90%;
+  
+      button {
+        display: block;
+        width: 90%;
+        color: $foreground;
+        font-size: 1.2rem;
+        background-color: $bg;
+        border: 3px solid #fff;
+        outline: 1px solid $disabled;
+        border-radius: 1rem;
+        padding: 12px;
+        margin: 1rem auto 0;
+        cursor: pointer;
+      }
+  
+      .selected-answer {
+        background: $primary;
+        color: $bg;
+      }
+      :focus {
+        outline: 3px solid $primary;
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: flex-end;
+  
+      button {
+        background: $accent;
+        border-radius: 0.5em;
+        font-size: 1.2rem;
+        color: #000;
+        padding: 1rem 3rem;
+        border: 3px solid #fff;
+        cursor: pointer;
+        margin-top: 1em;
+        
+  
+        &:disabled {
+          background: $bg-accent;
+          color: $disabled;
+          cursor: not-allowed;
+        }
+      }
+      :focus {
+        outline: 3px solid $accent;
+      }
+    }
+    .result {
+      text-align: center;
+    
+  
+    h3 {
+      font-size: 2rem;
+      letter-spacing: 1.4;
+      text-align: center;
+    }
+  
+    p{
+      font-size: 1.5rem;
+      font-weight: 500;
+      span {
+        color: $primary;
+        font-size: 1.6rem;
+      }
+    }
+    }
+  }

@@ -1,13 +1,4 @@
-$primary: #150080;
-$accent: #d08642;
-$bg: #fff;
-$bg-accent: #e7e7e8e9;
-$disabled: #9c9c9c;
-$foreground: #2d264b;
-
-// * {
-//   border: 1px solid red;
-// }
+@import "./vars.scss";
 
 body {
   margin: 0;
@@ -28,7 +19,7 @@ pre {
 
 .quiz-container {
   width: 90vw;
-  max-width: 600px;
+  max-width: 300px;
   // min-height: 80vh;
   background: $bg;
   border-radius: 4px;
@@ -150,7 +141,7 @@ pre {
   // background: inherit;
   color: #222;
   width: 90%;
-  max-width: 500px;
+  max-width: 300px;
   text-align: center;
   margin: 2rem auto 1rem;
   
