@@ -39,6 +39,11 @@ const onClickNext = () => {
   }
 }
 
+const onTryAgain = () => {
+  setResult(resultInitialState);
+  setShowResult(false);
+}
+
   return (
     <>
       <div className="quiz-container">
@@ -67,13 +72,13 @@ const onClickNext = () => {
           <p>Total questions: <span>{questions.length}</span></p>
           <p>Total correct answers: <span>{result.score}</span></p>
           <p>Total incorrect answers: <span>{result.wrongAnswers}</span></p>
-              <button className="try-again">Try again</button>
+              <button onClick={onTryAgain} className="try-again">Try again</button>
         </div>}
         
       
 
       
-            <p class="attribution">
+            <p id="attribution">
             The questions on this website contain public sector information licensed
             under <pre>the </pre>
             <a

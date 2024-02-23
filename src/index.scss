@@ -108,6 +108,25 @@ pre {
       outline: 3px solid $accent;
     }
   }
+  .result {
+    text-align: center;
+  
+
+  h3 {
+    font-size: 2rem;
+    letter-spacing: 1.4;
+    text-align: center;
+  }
+
+  p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    span {
+      color: $primary;
+      font-size: 1.6rem;
+    }
+  }
+  }
 }
 
 .try-again {
@@ -127,7 +146,7 @@ pre {
     outline: 3px solid $primary;
   }
 
-.attribution {
+#attribution {
   // background: inherit;
   color: #222;
   width: 90%;
@@ -135,7 +154,6 @@ pre {
   text-align: center;
   margin: 2rem auto 1rem;
   
-
   a {
     color: inherit;
   }
