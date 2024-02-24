@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { resultInitialState } from "../../constants";
 import "./Quiz.scss";
+import AnswerTimer from "../AnswerTimer/AnswerTimer";
 
 const Quiz = ({ questions }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -47,6 +48,7 @@ const onTryAgain = () => {
     <>
       <div className="quiz-container">
         {!showResult ? (<>
+        <AnswerTimer duration = {10}/>
           <span className="active-question-no">{currentQuestion + 1}</span>
           <span className="total-questions">/{questions.length}</span>
           <h2>{question}</h2>
