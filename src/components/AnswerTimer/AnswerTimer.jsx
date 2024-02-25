@@ -1,7 +1,7 @@
-import "./AnswerTimer.jsx";
+import "./AnswerTimer.scss";
 import { useEffect, useState, useRef } from "react";
 
-function AnswerTimer({duration}) {
+function AnswerTimer({duration, onTimeUp}) {
   const [counter, setCounter] = useState(0);
   const [progressLoaded, setProgressLoaded] = useState(1);
   const intervalRef = useRef();
@@ -19,12 +19,23 @@ function AnswerTimer({duration}) {
     if(counter === duration){
         clearInterval(intervalRef.current);
     }
+    setTimeout(() => {
+      onTimeUp();
+    }, 1000)
     
 }, [counter]);
 
   return (
     <div className="answer-timer-container">
-      <div className="progress">{counter}</div>
+      <div style={{
+        width: `${progressLoaded}%`,
+        backgroundColor: `${
+          progressLoaded <40 ? 'lightgreen' : progressLoaded <80 ? 'orange' : 'red'
+
+        }`
+      }} className="progress">
+
+      </div>
     </div>
   );
 }
